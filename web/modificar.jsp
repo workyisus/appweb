@@ -1,7 +1,7 @@
 <%-- 
-    Document   : baja
-    Created on : 5/10/2018, 02:25:20 PM
-    Author     : lab2
+    Document   : modificar
+    Created on : 25-oct-2018, 12:13:48
+    Author     : EDDNO_25
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,14 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Eliminar Datos</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <%            
             String strUsuario= (String)session.getAttribute("varSUsuario");
             
         %>
-        <form action="baja2.jsp" method="get">
+        <form action="modificar2.jsp" method="get">
             <div>
                 <h1><%=strUsuario%></h1>
                 <br>

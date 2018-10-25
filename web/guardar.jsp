@@ -14,8 +14,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            String Usuario = (String)session.getAttribute("varSUsuario");
+        <%            
             String ID = request.getParameter("txtID");
             String Nombre = request.getParameter("txtNombre");
             String Carrera = request.getParameter("sctCarrera");
@@ -59,14 +58,18 @@
             ResultSet resultado = null;
             try
             {
-                conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/itson", "yisus", "bowsette");
+                conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/itson", "root", "root");
                 
                 comando = conexion.createStatement();
-                comando.execute("");
+                comando.execute("INSERT INTO itson.alumnos (`idalumnos`,`NombreAlumno`,`Carrera`) VALUES ( " + ID + ",'" + Nombre + "','" + Carrera +"')");
             }
             catch(SQLException ex)
             {
                 
+            }
+            finally
+            {
+                conexion.close();
             }
         %>
         <h1>Se ha guardado exitosamente!</h1>

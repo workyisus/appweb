@@ -25,9 +25,9 @@
                 Nombre: <input type="text" name="txtNombre">
                 <br>
                 Carrera: <select name="sctCarrera">
-                    <option value ="1">Software </option>
-                    <option value ="2">Educacion Infantil </option>
-                    <option value ="3">Psicologia </option>
+                    <option value ="Software">Software </option>
+                    <option value ="Educacion">Educacion Infantil </option>
+                    <option value ="Psicologia">Psicologia </option>
                 </select>
                 <br>
                 <input type="submit" name="btnGuardar" value="Guardar">

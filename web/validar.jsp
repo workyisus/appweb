@@ -21,11 +21,10 @@
             Class.forName("com.mysql.jdbc.Driver");
             
             Connection conexion = null;
-            Statement comando = null;
-            ResultSet resultado = null;
+            Statement comando = null;            
             try
             {
-                conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/itson", "yisus", "bowsette");
+                conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/itson", "root", "root");
                 
                 comando = conexion.createStatement();
                 comando.execute("SELECT * FROM usuarios");
